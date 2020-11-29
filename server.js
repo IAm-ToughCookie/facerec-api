@@ -30,4 +30,4 @@ app.get('/profile/:id', profile.handleGetProfile(db));
 app.put('/image', image.handleImage(db));
 app.post('/imageurl', image.handleClarifaiCall())
 
-app.listen(3000, () => {console.log('Listening on 3000')});
+app.listen(process.env.PORT, () => {console.log(`Listening on ${process.env.PORT}`)});
